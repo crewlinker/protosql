@@ -1,0 +1,19 @@
+version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/crewlinker/protosql
+plugins:
+  - local:
+      - go
+      - run
+      - google.golang.org/protobuf/cmd/protoc-gen-go
+    out: .
+    opt: paths=source_relative
+  - local:
+      - go
+      - run
+      - ./cmd/protoc-gen-protosql
+    out: .
+    opt: paths=source_relative

@@ -1,0 +1,12 @@
+version: v2
+name: buf.build/crewlinker/protosql
+lint:
+  use:
+    - PACKAGE_NO_IMPORT_CYCLE
+    - STANDARD
+breaking:
+  use:
+    - FILE
+  except:
+    - EXTENSION_NO_DELETE
+    - FIELD_SAME_DEFAULT

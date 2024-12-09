@@ -1,0 +1,29 @@
+edition = "2023";
+
+package examples.v1;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "psql/v1/psql.proto";
+
+message CreateProtoSink {
+  option (psql.v1.query).kind = QUERY_KIND_EXEC;
+
+  double double_value = 1;
+  float float_value = 2;
+  int32 int32_value = 3;
+  int64 int64_value = 4;
+  uint32 uint32_value = 5;
+  uint64 uint64_value = 6;
+  sint32 sint32_value = 7;
+  sint64 sint64_value = 8;
+  fixed32 fixed32_value = 9;
+  fixed64 fixed64_value = 10;
+  sfixed32 sfixed32_value = 11;
+  sfixed64 sfixed64_value = 12;
+  bool bool_value = 13;
+  string string_value = 14;
+  bytes bytes_value = 15;
+  google.protobuf.Duration duration_value = 16;
+  google.protobuf.Timestamp timestamp_value = 17;
+}
